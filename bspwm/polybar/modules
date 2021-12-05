@@ -250,7 +250,7 @@ label = "%{A1:terminal -e gtop &:}%percentage%% %{A}"
 type = internal/date
 interval = 1
 format-margin = 0
-time = "%I:%M %p"
+time = "%I:%M %p  %a %m/%d"
 time-alt = "%A, %m/%d/%y"
 
 format-prefix = 

@@ -56,6 +56,9 @@ Plug 'ap/vim-css-color'
 Plug 'prettier/vim-prettier', {
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
 
+" Jinja syntax highlighting for flask
+Plug 'lepture/vim-jinja'
+
 " Eww
 Plug 'elkowar/yuck.vim'
 

@@ -117,6 +117,9 @@ pyon ()
     source "${HOME}"/.venv/"$1"/bin/activate
 }
 
+alias venvon="source venv/bin/activate"
+alias venvoff="deactivate"
+
 # Deactivate virtual environment
 alias pyoff="deactivate"
 
@@ -219,6 +222,7 @@ alias rec="ffmpeg -video_size 1366x768 -framerate 30 -f x11grab -i :0.0 -pix_fmt
 # autosuggestions
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+alias discord="discord --ignore-gpu-blocklist --disable-features=UseOzonePlatform --enable-features=VaapiVideoDecoder --use-gl=desktop --enable-gpu-rasterization --enable-zero-copy > /dev/null 2>&1 & disown"
 
 export GIT_EDITOR="nvim"
 export PATH=/home/angelo_f/.local/bin:$PATH
