@@ -16,16 +16,14 @@ monitor =
 monitor-fallback =
 monitor-strict = false
 
-override-redirect = false
+override-redirect = true
+wm-restack = bspwm
 
 bottom = false
 fixed-center = true
 
-width = 98%
-height = 25
-
-offset-x = 1%
-offset-y = 1%
+width = 100%
+height = 18
 
 background = ${color.background}
 foreground = ${color.foreground}
@@ -36,7 +34,7 @@ radius-bottom = 0.0
 line-size = 2
 line-color = ${color.blue}
 
-border-size = 6
+border-size = 4
 border-color = ${color.background}
 
 padding = 0
@@ -44,16 +42,16 @@ padding = 0
 module-margin-left = 0
 module-margin-right = 0
 
-font-0 = "Source Code Pro Medium:size=10;3"
-font-1 = "Iosevka Nerd Font:size=12;3"
-font-2 = "Iosevka Nerd Font:size=16;4"
+font-0 = "JetBrainsMono Nerd Font Mono:style=Medium:size=10;3"
+font-1 = "Iosevka Nerd Font:size=14;4"
+font-2 = "Iosevka Nerd Font:size=12;3"
 font-3 = "Iosevka Nerd Font:size=18;4"
 font-4 = "Source Code Pro Bold:size=13;3"
 
 # Default
-modules-left = spacing bspwm
-modules-center = 
-modules-right = MLD volume RPL brightness RRD sep BLD time BRD spacing
+modules-left = spacing spacing spacing bspwm
+modules-center =
+modules-right = volume brightness sep time spacing
 
 spacing = 0
 dim-value = 1.0
@@ -64,13 +62,13 @@ tray-maxsize = 16
 tray-background = ${color.background}
 tray-offset-x = 0
 tray-offset-y = 0
-tray-padding = 0
+tray-padding = 5 
 tray-scale = 1.0
 
 enable-ipc = true
 
-cursor-click = 
-cursor-scroll = 
+cursor-click = pointer
+cursor-scroll = pointer
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 

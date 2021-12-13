@@ -20,7 +20,7 @@ window:
 
   padding:
     x: 10
-    y: 2
+    y: 5
 
   decorations: full
   startup_mode: Windowed
@@ -31,7 +31,7 @@ window:
   multiplier: 3
 
 ## Background opacity
-background_opacity: 1.0 
+background_opacity: 1.0
 
 ## Cursor
 cursor:
@@ -40,6 +40,8 @@ cursor:
     blinking: always
 
   unfocused_hollow: false
+
+  thickness: 0.17
 
 ## Live config reload
 live_config_reload: true

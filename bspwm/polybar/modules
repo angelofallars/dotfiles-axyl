@@ -36,11 +36,10 @@ card = ${system.graphics_card}
 enable-scroll = true
 
 format = <ramp> <label>
-format-background = ${color.red}
 format-padding = 1
 
 label = %percentage%%
-label-foreground = ${color.background}
+label-foreground = ${color.foreground}
 
 ramp-0 = 
 ramp-1 = 
@@ -53,7 +52,7 @@ ramp-7 = 
 ramp-8 = 
 ramp-9 = 
 ramp-font = 2
-ramp-foreground = ${color.background}
+ramp-foreground = ${color.foreground}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -71,17 +70,15 @@ format-volume = <ramp-volume><label-volume>
 format-muted = <label-muted>
 format-muted-prefix = "  "
 format-muted-prefix-font = 2
-format-muted-prefix-foreground = ${color.background}
-format-muted-prefix-background = ${color.magenta}
 
 label-volume = "%percentage%% "
 label-muted = "Mute"
 
-label-volume-background = ${color.magenta}
-label-muted-background = ${color.magenta}
+;label-volume-background = ${color.magenta}
+;label-muted-background = ${color.magenta}
 
-label-volume-foreground = ${color.background}
-label-muted-foreground = ${color.background}
+;label-volume-foreground = ${color.background}
+;label-muted-foreground = ${color.background}
 
 ramp-volume-0 = "  "
 ramp-volume-1 = "  "
@@ -94,8 +91,8 @@ ramp-volume-7 = "  "
 ramp-volume-8 = "  "
 ramp-volume-9 = "  "
 ramp-volume-font = 2
-ramp-volume-foreground = ${color.background}
-ramp-volume-background = ${color.magenta}
+;ramp-volume-foreground = ${color.background}
+;ramp-volume-background = ${color.magenta}
 
 ramp-headphones-0 = 
 ramp-headphones-1 = 
@@ -183,27 +180,27 @@ format-font = 2
 
 label-monitor = %name%
 
-label-focused = %name%
+label-focused = 
 label-focused-foreground = ${color.blue}
 label-focused-background = ${color.background}
-label-focused-underline =  ${color.blue}
-label-focused-padding = 1
+;label-focused-underline =  ${color.blue}
+label-focused-padding = 0
 
-label-occupied = %name%
+label-occupied = 
 label-occupied-foreground = ${color.green}
 label-occupied-background = ${color.background}
 ;label-occupied-underline = 
-label-occupied-padding = 1
+label-occupied-padding = 0
 
-label-urgent = %name%
+label-urgent = 
 label-urgent-foreground = ${color.red}
 label-urgent-background = ${color.background}
 label-urgent-underline =  ${color.red}
-label-urgent-padding = 1
+label-urgent-padding = 0
 
-label-empty = %name%
+label-empty = 
 label-empty-foreground = ${color.foreground}
-label-empty-padding = 1
+label-empty-padding = 0
 
 ; Separator in between workspaces
 label-separator = "∙"
@@ -254,12 +251,14 @@ time = "%I:%M %p  %a %m/%d"
 time-alt = "%A, %m/%d/%y"
 
 format-prefix = 
-format-prefix-foreground = ${color.background}
-format-prefix-background = ${color.blue}
+format-prefix-font = 2
+format-padding = 1
+;format-prefix-foreground = ${color.background}
+;format-prefix-background = ${color.blue}
 
 label = %time%
-label-foreground = ${color.background}
-label-background = ${color.blue}
+;label-foreground = ${color.background}
+;label-background = ${color.blue}
 label-padding = 1
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
