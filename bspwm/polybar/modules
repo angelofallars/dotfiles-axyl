@@ -180,14 +180,14 @@ format-font = 2
 
 label-monitor = %name%
 
-label-focused = 
-label-focused-foreground = ${color.green}
+label-focused = 
+label-focused-foreground = ${color.cyan}
 label-focused-background = ${color.background}
 ;label-focused-underline =  ${color.blue}
 label-focused-padding = 0
 
 label-occupied = 
-label-occupied-foreground = ${color.green}
+label-occupied-foreground = ${color.blue}
 label-occupied-background = ${color.background}
 ;label-occupied-underline = 
 label-occupied-padding = 0
