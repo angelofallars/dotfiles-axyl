@@ -1,6 +1,6 @@
 call plug#begin()
 " Discord Rich Presence (The most important plugin)
-Plug 'vimsence/vimsence'
+" Plug 'vimsence/vimsence'
 
 " LSP IDE features
 Plug 'neovim/nvim-lspconfig'
@@ -14,7 +14,7 @@ Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 
 " Emmet autocomplete
-Plug 'mattn/emmet-vim'
+Plug 'mattn/emmet-vim', { 'for': 'html' }
 
 " Fuzzy finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -23,9 +23,6 @@ Plug 'junegunn/fzf.vim'
 " Gruvbox baby!
 " Plug 'gruvbox-community/gruvbox'
 Plug 'sainnhe/gruvbox-material'
-
-" Plug 'dracula/vim', { 'as': 'dracula' }
-" Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 " Pretty status line
 Plug 'vim-airline/vim-airline'
@@ -41,17 +38,17 @@ Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
 
 " HTML close tag
-Plug 'alvan/vim-closetag'
+Plug 'alvan/vim-closetag', { 'for': 'html' }
 
 " CSS coloring
-Plug 'ap/vim-css-color'
+Plug 'ap/vim-css-color', { 'for': ['css', 'sass', 'scss', 'less'] }
 
 " Prettier format for web dev
-Plug 'prettier/vim-prettier', {
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
+" Plug 'prettier/vim-prettier', {
+  " \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
 
 " Jinja syntax highlighting for flask
-Plug 'lepture/vim-jinja'
+" Plug 'lepture/vim-jinja', { 'for': 'html' }
 
 
 call plug#end()
@@ -60,27 +57,35 @@ if has('termguicolors')
   set termguicolors
 endif
 
-colorscheme gruvbox-material
-
 set noshowmode
 
-let g:gruvbox_material_palette = "mix"
+let g:gruvbox_material_palette = "material"
 let g:gruvbox_material_enable_bold = 1
 let g:gruvbox_material_enable_italic = 1
-let g:gruvbox_material_sign_column_background = 'none'
+" let g:gruvbox_material_sign_column_background = 'none'
 
-let g:gruvbox_material_statusline_style = "mix"
+let g:gruvbox_material_statusline_style = "material"
 let g:gruvbox_material_diagnostic_text_highlight = 1
 let g:gruvbox_material_diagnostic_line_highlight = 1
 let g:gruvbox_material_diagnostic_virtual_text = 'colored'
 
+let g:gruvbox_material_better_performance = 1
+
+" Maintain transparency of terminal
+let g:gruvbox_material_transparent_background = 1
+
+colorscheme gruvbox-material
+
 " Vimsence (Discord Rich Presence) options
-let g:vimsence_small_text = 'Neovim'
-let g:vimsence_small_image = 'neovim'
-let g:vimsence_editing_details = 'Editing: {}'
-let g:vimsence_editing_state = 'Workspace: {}'
+" let g:vimsence_small_text = 'Neovim'
+" let g:vimsence_small_image = 'neovim'
+" let g:vimsence_editing_details = 'Editing: {}'
+" let g:vimsence_editing_state = 'Workspace: {}'
 " Rich presence text on large image
-let g:presence_neovim_image_text   = "I use Neovim btw"
+" let g:presence_neovim_image_text   = "I use Neovim btw"
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 set autochdir
 set expandtab
@@ -126,6 +131,7 @@ mapping = {
       -- { name = 'snippy' }, -- For snippy users.
     }, {
       { name = 'buffer' },
+      { name = "path" },
     })
 })
 
@@ -195,6 +201,9 @@ require('lspconfig').sqlls.setup {
 require'lspconfig'.vimls.setup{
     capabilities = capabilities
 }
+require'lspconfig'.rust_analyzer.setup{
+    capabilities = capabilities
+}
 EOF
 
 " Airline setup
@@ -241,6 +250,8 @@ autocmd FileType json setlocal shiftwidth=2 tabstop=2
 autocmd FileType markdown setlocal shiftwidth=2 tabstop=2
 autocmd FileType jsx setlocal shiftwidth=2 tabstop=2
 autocmd FileType tsx setlocal shiftwidth=2 tabstop=2
+autocmd FileType vue setlocal shiftwidth=2 tabstop=2
+autocmd FileType angular setlocal shiftwidth=2 tabstop=2
 
 let g:user_emmet_settings = {
 \  'variables': {'lang': 'en'},
@@ -268,3 +279,5 @@ autocmd FileType c setlocal shiftwidth=8 tabstop=8
 
 source $HOME/.config/nvim/general/settings.vim
 source $HOME/.config/nvim/keys/mappings.vim
+
+highlight ColorColumn guibg=#504945

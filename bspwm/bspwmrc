@@ -9,17 +9,17 @@ $HOME/.config/bspwm/polybar/launch.sh
 workspaces() {
 	name=1
 	for monitor in `bspc query -M`; do
-		bspc monitor ${monitor} -n "$name" -d '' '' '' '' '' '' '漣'
+		bspc monitor ${monitor} -n "$name" -d '' '' '' '' '' ''
 		let name++
 	done
 }
 workspaces
 
 bspc config border_width         3
-bspc config window_gap           0
+bspc config window_gap           8
 bspc config split_ratio          0.50
-bspc config bottom_padding 0 
-bspc config top_padding 26 
+bspc config bottom_padding 0
+bspc config top_padding 24
 
 bspc config focused_border_color "#6E635A"
 bspc config normal_border_color "#524A43"
@@ -109,7 +109,10 @@ udiskie &
 picom --config $HOME/.config/bspwm/picom.conf &
 
 # Feh
-feh --bg-fill ~/.config/bspwm/axyl-gruvbox-wallpaper.png &
+feh --bg-fill ~/Pictures/sugimoto-wallpaper3.png &
 
 # Remap control key and caps lock
 xmodmap ~/.config/bspwm/swapkeys -display :0 &
+
+# Redshift night time
+pgrep -x redshift > /dev/null || redshift -l 14.599512:120.984222 &

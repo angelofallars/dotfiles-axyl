@@ -33,7 +33,7 @@ setopt prompt_subst
 
 NEWLINE=$'\n'
 
-prompt='$NEWLINE%B%F{cyan}%~%f%b$NEWLINE${vcs_info_msg_0_}%F{green}%f%b '
+prompt='%B%F{green}%~%f%b%F{green} ${vcs_info_msg_0_}%F{green}%f%b '
 
 # Simplify XBPS commands
 alias install="sudo xbps-install"
@@ -228,6 +228,14 @@ export GIT_EDITOR="nvim"
 export PATH=/home/angelo_f/.local/bin:$PATH
 #. "$HOME/.cargo/env"
 
+alias pd="pushd"
+alias ppd="popd"
+
 # Created by `pipx` on 2021-11-09 19:31:24
 export PATH="$PATH:/home/angelo-f/.local/bin"
-source /home/angelo-f/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source /home/angelo-f/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+export EXA_COLORS="di=32"
+
+# Treefetch baby!
+treefetch

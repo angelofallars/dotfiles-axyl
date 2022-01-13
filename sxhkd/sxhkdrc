@@ -36,10 +36,6 @@ ctrl + alt + l
 alt + e
     edit-configs
 
-# Launch Applications
-super + shift + {f,w,r,g,c,d,s}
-    {thunar,firefox,rangerfm,geany,code,discord,spotify}
-
 # Volume controls
 XF86Audio{RaiseVolume,LowerVolume,Mute}
     volume{ --inc, --dec, --toggle}

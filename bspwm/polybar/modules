@@ -180,8 +180,8 @@ format-font = 2
 
 label-monitor = %name%
 
-label-focused = 
-label-focused-foreground = ${color.blue}
+label-focused = 
+label-focused-foreground = ${color.green}
 label-focused-background = ${color.background}
 ;label-focused-underline =  ${color.blue}
 label-focused-padding = 0
@@ -247,10 +247,10 @@ label = "%{A1:terminal -e gtop &:}%percentage%% %{A}"
 type = internal/date
 interval = 1
 format-margin = 0
-time = "%I:%M %p  %a %m/%d"
+time = "%I:%M %p | %a %m/%d"
 time-alt = "%A, %m/%d/%y"
 
-format-prefix = 
+;format-prefix = 
 format-prefix-font = 2
 format-padding = 1
 ;format-prefix-foreground = ${color.background}
