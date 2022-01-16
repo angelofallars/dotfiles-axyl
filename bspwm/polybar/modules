@@ -111,7 +111,7 @@ poll-interval = 2
 time-format = %H:%M
 
 format-charging = <animation-charging><label-charging>
-format-charging-prefix = 
+format-charging-prefix =
 
 format-discharging = <ramp-capacity><label-discharging>
 
@@ -157,6 +157,9 @@ animation-charging-framerate = 750
 [module/bspwm]
 type = internal/bspwm
 
+format-background = ${color.background}
+format-padding = 1
+
 pin-workspaces = true
 inline-mode = false
 
@@ -180,32 +183,29 @@ format-font = 2
 
 label-monitor = %name%
 
-label-focused = 
-label-focused-foreground = ${color.cyan}
-label-focused-background = ${color.background}
+label-focused = ﱣ
+label-focused-foreground = ${color.foreground}
 ;label-focused-underline =  ${color.blue}
 label-focused-padding = 0
 
-label-occupied = 
+label-occupied = ﱣ
 label-occupied-foreground = ${color.blue}
-label-occupied-background = ${color.background}
-;label-occupied-underline = 
+;label-occupied-underline =
 label-occupied-padding = 0
 
-label-urgent = 
+label-urgent = ﱣ
 label-urgent-foreground = ${color.red}
-label-urgent-background = ${color.background}
 label-urgent-underline =  ${color.red}
 label-urgent-padding = 0
 
-label-empty = 
+label-empty = ﱤ
 label-empty-foreground = ${color.foreground}
 label-empty-padding = 0
 
 ; Separator in between workspaces
 label-separator = "∙"
 label-separator-padding = 0
-label-separator-foreground = ${color.altblack} 
+label-separator-foreground = ${color.altblack}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -255,11 +255,12 @@ format-prefix-font = 2
 format-padding = 1
 ;format-prefix-foreground = ${color.background}
 ;format-prefix-background = ${color.blue}
+format-background = ${color.background}
 
 label = %time%
 ;label-foreground = ${color.background}
 ;label-background = ${color.blue}
-label-padding = 1
+label-padding = 0
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -309,7 +310,7 @@ type=custom/text
 content = 
 content-font = 4
 content-foreground= ${color.background}
-content-background = ${color.blue} 
+content-background = ${color.blue}
 content-padding = 1
 click-left=def-dmenu
 

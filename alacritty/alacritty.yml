@@ -20,18 +20,19 @@ window:
 
   padding:
     x: 10
-    y: 5
+    y: 10
 
   decorations: full
   startup_mode: Windowed
   dynamic_title: true
+  dynamic_padding: true
 
 ## scrolling
   history: 10000
   multiplier: 3
 
 ## Background opacity
-background_opacity: 0.85
+background_opacity: 1.00
 
 ## Cursor
 cursor:

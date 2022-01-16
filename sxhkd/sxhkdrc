@@ -8,15 +8,15 @@ super + Escape
 
 # Launch Terminal
 super + Return
-    alacritty -t "Terminal" -e "/home/angelo-f/.config/sxhkd/new_tmux_terminal.sh"
+    kitty -T "Terminal" /home/angelo-f/.config/sxhkd/new_tmux_terminal.sh
 
 # terminal emulator (no tmux)
 super + shift + Return
-	alacritty -t "Terminal"
+	kitty -T "Terminal"
 
 # terminal emulator (new tmux session)
 super + alt + Return
-	alacritty -t "Terminal" -e "tmux"
+	kitty -T "Terminal" tmux
 
 # j4 dmenu
 alt + F1
@@ -46,7 +46,7 @@ XF86MonBrightness{Up,Down}
 
 # screenshot
 Print
-    takeshot --now
+    flameshot gui
 
 # screenshot in 5 seconds
 alt + Print

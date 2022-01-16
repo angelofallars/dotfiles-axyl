@@ -1,7 +1,7 @@
 [module/spacing]
 type = custom/text
 content = " "
-content-background = ${color.background}
+content-background = ${color.transparent}
 
 [module/sep]
 type = custom/text
@@ -12,6 +12,20 @@ content-font = 3
 content-background = ${color.background}
 content-foreground = ${color.altblack}
 content-padding = 1
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/leftcirc]
+type = custom/text
+content = "%{T3}%{T-}"
+content-background = ${color.transparent}
+content-foreground = ${color.background}
+
+[module/rightcirc]
+type = custom/text
+content = "%{T3}%{T-}"
+content-background = ${color.transparent}
+content-foreground = ${color.background}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 

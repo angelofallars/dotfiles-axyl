@@ -237,5 +237,5 @@ export PATH="$PATH:/home/angelo-f/.local/bin"
 
 export EXA_COLORS="di=32"
 
-# Treefetch baby!
-treefetch
+# A nice lil bonsai shell for Rust lovers.
+treefetch --bonsai
